@@ -33,9 +33,9 @@
       "spec": {
         "ports": [
           {
-            "name": "web",
-            "port": 8090,
-            "targetPort": 8090
+            "name": "5090-tcp",
+            "port": 5090,
+            "targetPort": 5090
           }
         ],
         "selector": {
@@ -174,7 +174,7 @@
                 "image": " ",
                 "ports": [
                   {
-                    "containerPort": 8090
+                    "containerPort": 5090
                   }
                 ],
                 "readinessProbe": {
@@ -182,7 +182,7 @@
                   "initialDelaySeconds": 3,
                   "httpGet": {
                     "path": "/",
-                    "port": 8090
+                    "port": 5090
                   }
                 },
                 "livenessProbe": {
@@ -190,7 +190,7 @@
                     "initialDelaySeconds": 30,
                     "httpGet": {
                         "path": "/",
-                        "port": 8090
+                        "port": 5090
                     }
                 },
                 "resources": {
