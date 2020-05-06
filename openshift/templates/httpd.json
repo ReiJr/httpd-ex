@@ -34,8 +34,8 @@
         "ports": [
           {
             "name": "web",
-            "port": 8080,
-            "targetPort": 8080
+            "port": 8090,
+            "targetPort": 8090
           }
         ],
         "selector": {
@@ -170,11 +170,11 @@
           "spec": {
             "containers": [
               {
-                "name": "httpd-example",
+                "name": "apache-nalds",
                 "image": " ",
                 "ports": [
                   {
-                    "containerPort": 8080
+                    "containerPort": 8090
                   }
                 ],
                 "readinessProbe": {
@@ -182,7 +182,7 @@
                   "initialDelaySeconds": 3,
                   "httpGet": {
                     "path": "/",
-                    "port": 8080
+                    "port": 8090
                   }
                 },
                 "livenessProbe": {
@@ -190,7 +190,7 @@
                     "initialDelaySeconds": 30,
                     "httpGet": {
                         "path": "/",
-                        "port": 8080
+                        "port": 8090
                     }
                 },
                 "resources": {
@@ -234,7 +234,7 @@
       "displayName": "Git Repository URL",
       "description": "The URL of the repository with your application source code.",
       "required": true,
-      "value": "https://github.com/sclorg/httpd-ex.git"
+      "value": "https://github.com/ReiJr/httpd-ex.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
